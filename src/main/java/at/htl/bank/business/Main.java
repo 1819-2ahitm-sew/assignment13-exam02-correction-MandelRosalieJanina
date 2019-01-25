@@ -91,7 +91,7 @@ public class Main {
             System.out.println(kontenGesammt.get(i));
         }
 
-        System.out.println("erstelleKonte ist implementiert");
+        System.out.println("Erstellung der Konten beendet");
     }
 
     /**
@@ -109,7 +109,7 @@ public class Main {
      * @param datei BUCHUNGSDATEI
      */
     private static void fuehreBuchungenDurch(String datei) {
-        System.out.println("fuehreBuchungenDurch noch nicht implementiert");
+
         String[] parts;
         double betrag;
 
@@ -140,9 +140,8 @@ public class Main {
         }
 
 
-        for (int i = 0; i < kontenGesammt.size(); i++) {
-            System.out.println(kontenGesammt.get(i).getKontoStand());
-        }
+
+        System.out.println("Buchung der Beträge beendet");
     }
 
     /**
@@ -165,7 +164,7 @@ public class Main {
      * @param datei ERGEBNISDATEI
      */
     private static void schreibeKontostandInDatei(String datei) {
-        System.out.println("schreibeKontostandInDatei noch nicht implementiert");
+
 
 
         try(PrintWriter printWriter = new PrintWriter(new FileWriter(datei))){
@@ -187,6 +186,8 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        System.out.println("Ausgabe in Ergebnsidatei beendet");
     }
 
     /**
