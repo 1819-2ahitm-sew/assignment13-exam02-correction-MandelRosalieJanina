@@ -3,6 +3,7 @@ package at.htl.bank.business;
 import at.htl.bank.model.BankKonto;
 import at.htl.bank.model.GiroKonto;
 import at.htl.bank.model.SparKonto;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -174,7 +175,12 @@ public class Main {
 
                 if (kontenGesammt.get(i) instanceof  SparKonto){
                     ((SparKonto) kontenGesammt.get(i)).zinsenAnrechen();
+                    printWriter.printf("%s;Sparkonto;%.2f%n", kontenGesammt.get(i).getName(), kontenGesammt.get(i).getKontoStand());
+                }else{
+                    printWriter.printf("%s;Girokonto;%.2f%n", kontenGesammt.get(i).getName(), kontenGesammt.get(i).getKontoStand());
+
                 }
+
             }
 
 
